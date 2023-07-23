@@ -522,7 +522,7 @@
         </div>
         <div class="main2">
             <div>
-                <a href="http://localhost:4200/"><button id="backbutton">Back</button></a>
+                <a href="https://64bd8c63624b41612866d502--zesty-sfogliatella-f21031.netlify.app/"><button id="backbutton">Back</button></a>
 
                 <h1 id="headi">Train Your Model</h1>
                 <div id="divhere">
@@ -567,7 +567,7 @@
 
     // code for train model
     let transcriptRes = "";
-    fetch("http://localhost:5000/transcriptsInfo", {
+    fetch("https://cautious-ruby-cap.cyclic.app/transcriptsInfo", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -587,7 +587,7 @@
     var textqa = ""
     vp = ""
 
-    fetch("http://localhost:5000/qandaInfo", {
+    fetch("https://cautious-ruby-cap.cyclic.app/qandaInfo", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -639,7 +639,7 @@
         // i have to make substring of this 
 
         const getChatResponse = async (incomingChatDiv) => {
-            const API_URL = "http://localhost:5000/chat";
+            const API_URL = "https://cautious-ruby-cap.cyclic.app/chat";
             const pElement = document.createElement("p");
 
             let promptpreText1 = `[give ans in 250 words only ] You are a Advicer for parents to their childrens related Questions. In the end of this para you will gets the question from the parents you have to  responds the question as per its context in the tone and language of the influencer. Your task is to generate an answer for the parents that follows Influencer's tone and style. Below are examples of a question asked by the follower, along with different answers. The tone and style of Answers should match the Influencers tone. I will gave you question and answer so you have anyalyze the tone of that influencer and generate a response that looks similar in tone of that Influencer.  Write the answers that with high scores, brief answers, relevance, written answer seems personal & not machine generated avoid bullet points, have few punctuation errors, slangs or abbreviations like coz, it seems written from the heart not by a technical expert using terms from child psychology.`
@@ -819,7 +819,7 @@
             answer: Answerval
         }
         console.log(payload);
-        fetch("http://localhost:5000/qanda", {
+        fetch("https://cautious-ruby-cap.cyclic.app/qanda", {
             method: "POST",
             body: JSON.stringify(payload),
             headers: {
@@ -851,7 +851,7 @@
             transcript: Transcripttext.value
         }
         console.log(payload);
-        fetch("http://localhost:5000/transcripts", {
+        fetch("https://cautious-ruby-cap.cyclic.app/transcripts", {
             method: "POST",
             body: JSON.stringify(payload),
             headers: {

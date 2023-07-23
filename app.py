@@ -17,6 +17,10 @@ app = Flask(__name__)
 CORS(app)
 
 
+@app.route('/')
+def hello_world():
+    return 'Welcome to Influencer AI'
+
 
 # Get the JWT secret key from the environment variables
 jwt_secret_key = os.getenv("JWT_SECRET")
@@ -39,9 +43,7 @@ app.register_blueprint(influencer_bp)
 app.register_blueprint(transcript_bp)
 app.register_blueprint(qanda_bp)
 
-@app.route('/')
-def hello_world():
-    return 'Welcome to Influencer AI'
+
 
 # Apply the authentication middleware to specific routes
 

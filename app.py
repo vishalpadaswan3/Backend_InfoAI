@@ -19,7 +19,7 @@ CORS(app)
 
 @app.route('/')
 def hello_world():
-    return 'Welcome to Influencer AI'
+    return 'Backend App by flask'
 
 
 # Get the JWT secret key from the environment variables
